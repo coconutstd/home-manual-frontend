@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <h1 class="sr-only">우리집 사용설명서 메뉴바</h1>
-      <ul class="navbar-nav nav-items-left col-4">
+      <ul class="navbar-nav nav-items-left col-4 ">
         <li class="nav-item">
           <a href="#" class="navbar-brand">
             <img alt="우리집 사용설명서 로고" src="../assets/logo.png"></a>
@@ -19,15 +19,15 @@
         </li>
       </ul>
       <ul class="col-1"></ul>
-      <ul class="navbar-nav nav-items-center col-4">
+      <ul class="navbar-nav nav-items-center col-4 ">
         <li>
           <form class="form-inline" action="">
-            <input class="form-control mr-sm-2 search-bar" type="text" size="40" placeholder="일련번호를 입력해주세요">
+            <input v-model="text" class="form-control mr-sm-2 search-bar" type="text" size="40" placeholder="일련번호를 입력해주세요">
           </form>
         </li>
       </ul>
       <ul class="col-1"></ul>
-      <ul class="navbar-nav nav-items-right col-1">
+      <ul class="navbar-nav nav-items-right col-2 ">
         <li class="nav-item">
           <button type="button" class="btn">
             <span class="sr-only">프로필 사진</span>
@@ -48,7 +48,13 @@
 
 <script>
 export default {
-  name: "GlobalNavigation"
+  data() {
+    return{
+      text : '안녕하세요'
+    }
+  }
+
+
 }
 </script>
 
