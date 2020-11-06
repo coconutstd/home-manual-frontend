@@ -1,5 +1,5 @@
 const state = {
-  accessToken: null,
+  token: null,
   email : ''
 }
 

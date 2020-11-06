@@ -4,13 +4,13 @@ const mutations = {
   LOGIN(state, {token, email}){
     console.log('hello')
     if(!token) return
-    state.accessToken = token
+    state.token = token
     state.email = email
-    localStorage.setItem('token', token)
     setAuthInHeader(token)
   },
   LOGOUT(state){
     state.token = null
+    state.email = ''
     delete localStorage.token
     setAuthInHeader(null)
   }

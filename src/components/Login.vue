@@ -8,10 +8,11 @@
 export default {
   data(){
     return {
-
+      rPath: ''
     }
   },
   mounted() {
+
     const naverLogin = new naver.LoginWithNaverId({
       clientId: 'p_P6CJqSge7yXo88mCvG',
       callbackUrl: `http://localhost:8080/login_callback`,

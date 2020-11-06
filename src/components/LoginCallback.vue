@@ -10,10 +10,12 @@ export default {
   data(){
     return {
       email : '',
-      token : null
+      token : null,
+      rPath: ''
     }
   },
   created() {
+    this.rPath = this.$route.query.rPath || '/'
     const that = this
     const naverLogin = new naver.LoginWithNaverId({
       clientId: 'p_P6CJqSge7yXo88mCvG',
@@ -30,7 +32,7 @@ export default {
       } else {
         console.log('AccessToken이 올바르지 않습니다.')
       }
-      that.$router.push('/')
+      that.$router.push(that.rPath)
     })
   },
   methods: {

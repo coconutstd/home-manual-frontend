@@ -4,8 +4,20 @@ import Home from '../components/Home.vue'
 import Login from '../components/Login.vue'
 import NotFound from '../components/NotFound.vue'
 import LoginCallback from '../components/LoginCallback.vue'
+import CustomManual from '../components/CustomManual.vue'
+import store from '../store'
 
 Vue.use(VueRouter)
+
+const requireAuth = (to, from, next) => {
+  const loginPath = `/login?rPath=${encodeURIComponent(to.path)}`
+  if (store.getters.isAuth){
+    next()
+  }else{
+    alert('로그인이 필요한 페이지입니다')
+    next(loginPath)
+  }
+}
 
 const router = new VueRouter({
   mode: 'history',
@@ -21,6 +33,11 @@ const router = new VueRouter({
     {
       path: '/login_callback',
       component: LoginCallback
+    },
+    {
+      path: '/custom_manual',
+      component: CustomManual,
+      beforeEnter: requireAuth
     },
     {
       path: '*',

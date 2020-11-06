@@ -4,13 +4,13 @@
       <h1 class="sr-only">우리집 사용설명서 메뉴바</h1>
       <ul class="navbar-nav nav-items-left col-4 ">
         <li class="nav-item">
-          <a href="#" class="navbar-brand">
-            <img alt="우리집 사용설명서 로고" src="../assets/logo.png"></a>
+          <router-link to="/" href="#" class="navbar-brand">
+            <img alt="우리집 사용설명서 로고" src="../assets/logo.png"></router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <router-link to="/custom_manual" class="nav-link" href="#">
             개인모음
-          </a>
+          </router-link>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">
@@ -35,13 +35,13 @@
           </button>
         </li>
         <li class="nav-item">
-          <button v-if="this.$store.state.accessToken===null" type="button" class="btn" @click="onLoginClick">
+          <button v-if="isAuth" type="button" class="btn" @click.prevent="logout">
             <span class="sr-only">유저 정보</span>
-            <i class="fas fa-user"></i>
+            로그아웃
             <!-- 드롭다운 -->
           </button>
-          <button v-else @click="onLogoutClick">
-            <span>로그아웃</span>
+          <button v-else class="btn">
+            <router-link to="/login">Login</router-link>
           </button>
         </li>
       </ul>
@@ -51,6 +51,7 @@
 
 <script>
 import router from '../router'
+import {mapGetters, mapMutations} from 'vuex'
 
 export default {
   data() {
@@ -58,13 +59,21 @@ export default {
       text : '안녕하세요'
     }
   },
-
+  computed: {
+    ...mapGetters([
+      'isAuth'
+    ])
+  },
   methods: {
+    ...mapMutations([
+      'LOGOUT'
+    ]),
     onLoginClick(){
       router.push('/login')
     },
-    onLogoutClick(){
-
+    logout(){
+      this.LOGOUT()
+      this.$router.push('/login')
     }
   }
 

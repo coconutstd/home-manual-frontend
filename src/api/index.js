@@ -32,8 +32,3 @@ export const board = {
     return request('post', '/boards', {title})
   }
 }
-export const auth = {
-  login(email, password) {
-    return request('post', '/login', {email, password})
-  }
-}
