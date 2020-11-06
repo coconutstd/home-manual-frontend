@@ -7,24 +7,11 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
     <link rel="stylesheet" href="src/assets/fontawesome/css/all.css">
     <link rel="text" href="src/assets/webfonts/">
+
   </head>
   <body>
     <div id="app"></div>
+    <script src="src/naver/naver_login.js"></script>
     <script src="/dist/build.js"></script>
-    <script src="./src/auth/naveridlogin_js_sdj_2.0.0.js"></script>
   </body>
-  <script type="text/javascript">
-    var naverLogin = new naver.LoginWithNaverId(
-      {
-        clientId: "p_P6CJqSge7yXo88mCvG",
-        callbackUrl: "http://localhost:8080/Api/Member/Oauth2ClientCallback",
-        isPopup: false, /* 팝업을 통한 연동처리 여부 */
-        loginButton: {color: "green", type: 3, height: 30} /* 로그인 버튼의 타입을 지정 */
-      }
-    );
-
-    /* 설정정보를 초기화하고 연동을 준비 */
-    naverLogin.init();
-
-  </script>
 </html>

@@ -1,16 +1,18 @@
 <template>
   <div>
-    <div id="naverIdLogin"><a id="naverIdLogin_loginButton" href="#" role="button"><img src="https://static.nid.naver.com/oauth/big_g.PNG" width=320></a></div>
+    Home
+    <h1 v-if="this.$store.state.email">{{this.$store.state.email}}</h1>
   </div>
 </template>
 
 <script>
+
 export default {
-data(){
-  return {
-    msg : 'Home'
+  data(){
+    return {
+      msg : 'Home'
+    }
   }
-}
 }
 </script>
 

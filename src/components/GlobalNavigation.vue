@@ -35,10 +35,13 @@
           </button>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn">
+          <button v-if="this.$store.state.accessToken===null" type="button" class="btn" @click="onLoginClick">
             <span class="sr-only">유저 정보</span>
             <i class="fas fa-user"></i>
             <!-- 드롭다운 -->
+          </button>
+          <button v-else @click="onLogoutClick">
+            <span>로그아웃</span>
           </button>
         </li>
       </ul>
@@ -47,10 +50,21 @@
 </template>
 
 <script>
+import router from '../router'
+
 export default {
   data() {
     return{
       text : '안녕하세요'
+    }
+  },
+
+  methods: {
+    onLoginClick(){
+      router.push('/login')
+    },
+    onLogoutClick(){
+
     }
   }
 
@@ -92,6 +106,12 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.btn{
+  margin: 0px 5px;
+  border: solid 1px green;
+  background-color: aquamarine;
 }
 
 </style>
