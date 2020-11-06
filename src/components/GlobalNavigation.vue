@@ -2,11 +2,10 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <h1 class="sr-only">우리집 사용설명서 메뉴바</h1>
-      <ul class="navbar-nav navbar-nav-left">
+      <ul class="navbar-nav nav-items-left col-4">
         <li class="nav-item">
           <a href="#" class="navbar-brand">
-            <img alt="우리집 사용설명서 로고" src="../assets/logo.png"
-                 style="width:50px; background-color: #8fcafe"></a>
+            <img alt="우리집 사용설명서 로고" src="../assets/logo.png"></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">
@@ -19,16 +18,24 @@
           </a>
         </li>
       </ul>
-      <ul class="navbar-nav">
+      <ul class="col-1"></ul>
+      <ul class="navbar-nav nav-items-center col-4">
         <li>
           <form class="form-inline" action="">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <input class="form-control mr-sm-2 search-bar" type="text" size="40" placeholder="일련번호를 입력해주세요">
           </form>
         </li>
       </ul>
-      <ul class="navbar-nav justify-content-right">
+      <ul class="col-1"></ul>
+      <ul class="navbar-nav nav-items-right col-1">
         <li class="nav-item">
-          <button type="button" class="btn" style="background-color: #8fcafe">
+          <button type="button" class="btn">
+            <span class="sr-only">프로필 사진</span>
+            <i class="fas fa-id-badge"></i>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn">
             <span class="sr-only">유저 정보</span>
             <i class="fas fa-user"></i>
             <!-- 드롭다운 -->
@@ -48,23 +55,37 @@ export default {
 <style>
 .navbar{
   display: flex;
-  justify-content: space-between;
 }
-.navbar-nav-left{
+
+.nav-items-left{
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 30%;
 }
-
-.navbar-nav-left nav-item{
+.nav-items-left li{
   margin-right: 10px;
 }
 
 .navbar-brand img{
-  display: block;
-  width:50px;
-  height:50px;
-  border-radius: 50%;
+  width: 40px;
 }
+
+.nav-items-left a{
+  display: block;
+}
+
+.nav-items-center{
+  display: flex;
+}
+.search-bar{
+  width: 50px;
+  transform: translateX(-20%);
+}
+
+.nav-items-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 </style>
