@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-dark bg-dark">
       <h1 class="sr-only">우리집 사용설명서 메뉴바</h1>
-      <ul class="navbar-nav nav-items-left col-4 ">
+      <ul class="navbar-nav nav-items-left col-12 col-md-6 col-xl-3">
         <li class="nav-item">
           <router-link to="/" href="#" class="navbar-brand">
             <img alt="우리집 사용설명서 로고" src="../assets/logo.png"></router-link>
@@ -18,16 +18,14 @@
           </a>
         </li>
       </ul>
-      <ul class="col-1"></ul>
-      <ul class="navbar-nav nav-items-center col-4 ">
-        <li>
+      <ul class="navbar-nav nav-items-center col-12 col-md-6 col-xl-6 align-self-center">
+        <li class="nav-item">
           <form class="form-inline" action="">
             <input v-model="text" class="form-control mr-sm-2 search-bar" type="text" size="40" placeholder="일련번호를 입력해주세요">
           </form>
         </li>
       </ul>
-      <ul class="col-1"></ul>
-      <ul class="navbar-nav nav-items-right col-2 ">
+      <ul class="navbar-nav nav-items-right col-12 col-md-6 col-xl-3 justify-content-end">
         <li class="nav-item">
           <button type="button" class="btn">
             <span class="sr-only">프로필 사진</span>
@@ -106,10 +104,10 @@ export default {
 .nav-items-center{
   display: flex;
 }
-.search-bar{
-  width: 50px;
-  transform: translateX(-20%);
-}
+/*.search-bar{*/
+/*  width: 50px;*/
+/*  transform: translateX(-20%);*/
+/*}*/
 
 .nav-items-right{
   display: flex;
