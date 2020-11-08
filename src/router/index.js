@@ -4,8 +4,10 @@ import Home from '../components/Home.vue'
 import Login from '../components/Login.vue'
 import NotFound from '../components/NotFound.vue'
 import LoginCallback from '../components/LoginCallback.vue'
+import SearchResult from "../components/SearchResult.vue"
 import CustomManual from '../components/CustomManual.vue'
 import store from '../store'
+
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,10 @@ const router = new VueRouter({
     {
       path: '/login_callback',
       component: LoginCallback
+    },
+    {
+      path: '/search/:keyword',
+      component: SearchResult
     },
     {
       path: '/custom_manual',

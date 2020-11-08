@@ -1,18 +1,20 @@
 <template>
   <div>
-    <div id="naverIdLogin"></div>
+    <div class="oauth_list">
+      <div id="naverIdLogin"></div>
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
   data(){
     return {
-      rPath: ''
+      rPath: '',
     }
   },
   mounted() {
-
     const naverLogin = new naver.LoginWithNaverId({
       clientId: 'p_P6CJqSge7yXo88mCvG',
       callbackUrl: `http://localhost:8080/login_callback`,
@@ -31,4 +33,11 @@ export default {
 
 <style scoped>
 
+.oauth_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100vh;
+}
 </style>

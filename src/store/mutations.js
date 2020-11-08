@@ -15,6 +15,9 @@ const mutations = {
     delete localStorage["com.naver.nid.access_token"]
     delete localStorage["com.naver.nid.oauth.state_token"]
     setAuthInHeader(null)
+  },
+  SET_RESULTS(state, results){
+    state.searchResults = results
   }
 }
 
