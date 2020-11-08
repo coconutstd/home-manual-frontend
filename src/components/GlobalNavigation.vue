@@ -74,6 +74,14 @@ export default {
   font-size: 15px;
 }
 
+.form-inline input{
+  border: solid 1px white;
+}
+
+.form-inline button{
+  border: none;
+}
+
 @media screen and (min-width: 768px) {
   .navbar-brand {
     font-size: 20px;
