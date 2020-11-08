@@ -9,6 +9,7 @@ const mutations = {
     setAuthInHeader(token)
   },
   LOGOUT(state){
+    console.log('logout')
     state.token = null
     state.email = ''
     delete localStorage["com.naver.nid.access_token"]
