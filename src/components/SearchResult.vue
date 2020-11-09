@@ -15,43 +15,15 @@
               </tr>
               </thead>
               <tbody>
-              <tr>
+              <tr v-for="item in this.$store.state.searchResults" :key="item.id">
                 <td>
-                  <img src="https://picsum.photos/200" alt="썸네일 입니다" class="img-thumbnail" style="width:100px">
+                  <img :src="item.thumnail" alt="썸네일 입니다" class="img-thumbnail" style="width:100px">
                 </td>
                 <td>
-                  <h2>SL-A</h2>
+                  <h2>{{item.title}}</h2>
                 </td>
                 <td>
-                  <h2>프린터</h2>
-                </td>
-                <td>
-                  <h2>삼성</h2>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="https://picsum.photos/200" alt="썸네일 입니다" class="img-thumbnail" style="width:100px">
-                </td>
-                <td>
-                  <h2>SL-B</h2>
-                </td>
-                <td>
-                  <h2>프린터</h2>
-                </td>
-                <td>
-                  <h2>HP</h2>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="https://picsum.photos/200" alt="썸네일 입니다" class="img-thumbnail" style="width:100px">
-                </td>
-                <td>
-                  <h2>SL-M5370LX</h2>
-                </td>
-                <td>
-                  <h2>프린터</h2>
+                  <h2>{{ item.category }}</h2>
                 </td>
                 <td>
                   <h2>삼성</h2>
