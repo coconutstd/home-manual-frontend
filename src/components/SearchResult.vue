@@ -31,6 +31,7 @@
               </tr>
               </tbody>
             </table>
+            <infinite-loading @infinite="infiniteHandler" spinner="waveDots"></infinite-loading>
           </div>
         </div>
       </div>
@@ -39,8 +40,24 @@
 </template>
 
 <script>
+import InfiniteLoading from 'vue-infinite-loading'
+
 export default {
   name: "SearchResult"
+  ,
+  data() {
+    return{
+      limit: 0,
+    }
+  },
+  components: {
+    InfiniteLoading
+  },
+  methods: {
+    infiniteHandler($state){
+
+    }
+  }
 }
 </script>
 
