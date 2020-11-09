@@ -1,7 +1,7 @@
 const state = {
   token: null,
   email : '',
-  searchResults: [],
+  searchResults: {},
 }
 
 export default state

@@ -26,6 +26,6 @@ export const setAuthInHeader = token => {
 
 export const manual = {
   fetch(keyword) {
-    return keyword ? request('get', `/manual/${keyword}`) : request('get', '/manual')
+    return keyword ? request('get', `/manual?title=${keyword}`) : request('get', '/manual')
   },
 }

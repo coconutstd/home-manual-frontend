@@ -17,6 +17,7 @@ const mutations = {
     setAuthInHeader(null)
   },
   SET_RESULTS(state, results){
+    console.log(results)
     state.searchResults = results
   }
 }

@@ -2,7 +2,7 @@
   <div>
     <div class="search-results">
       <div class="container my-2">
-        <h1><strong>{{this.$store.state.searchResults["keyword"]}}</strong> 의 검색결과입니다</h1>
+<!--        <h1><strong>{{this.$store.state.searchResults["keyword"]}}</strong> 의 검색결과입니다</h1>-->
         <div class="row">
           <div class="col-12">
             <table class="table table-hover">
