@@ -1,8 +1,11 @@
 <template>
   <div>
-    <div class="oauth_list">
-      <div id="naverIdLogin"></div>
+    <div class="container">
+      <div class="oauth_list">
+        <div id="naverIdLogin"></div>
+      </div>
     </div>
+
   </div>
 </template>
 
@@ -32,12 +35,21 @@ export default {
 </script>
 
 <style scoped>
-
-.oauth_list {
+.container{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
   height: 100vh;
+}
+.oauth_list {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #eeeeee;
+  width: 400px;
+  height: 400px;
 }
 </style>

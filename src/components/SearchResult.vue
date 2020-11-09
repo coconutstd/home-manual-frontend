@@ -17,13 +17,16 @@
               <tbody>
               <tr v-for="item in this.$store.state.searchResults" :key="item.id">
                 <td>
-                  <img :src="item.thumnail" alt="썸네일 입니다" class="img-thumbnail" style="width:100px">
+                  <img :src="item.fields.product_image_link" alt="썸네일 입니다" class="img-thumbnail" style="width:100px">
                 </td>
                 <td>
-                  <h2>{{item.title}}</h2>
+                  <h2>{{item}}</h2>
                 </td>
                 <td>
-                  <h2>{{ item.category }}</h2>
+                  <h2>{{item.fields.product_code}}</h2>
+                </td>
+                <td>
+                  <h2>{{ item.fields.product_name }}</h2>
                 </td>
                 <td>
                   <h2>삼성</h2>
@@ -31,7 +34,7 @@
               </tr>
               </tbody>
             </table>
-            <infinite-loading @infinite="infiniteHandler" spinner="waveDots"></infinite-loading>
+<!--            <infinite-loading @infinite="infiniteHandler" spinner="waveDots"></infinite-loading>-->
           </div>
         </div>
       </div>
