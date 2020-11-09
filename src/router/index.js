@@ -37,7 +37,7 @@ const router = new VueRouter({
       component: LoginCallback
     },
     {
-      path: '/search/:keyword',
+      path: '/manual/:keyword',
       component: SearchResult
     },
     {

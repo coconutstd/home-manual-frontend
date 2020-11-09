@@ -45,7 +45,7 @@ export default {
     search(){
       this.FETCH_RESULTS({keyword:this.keyword})
       // .then(({keyword}) => this.$router.push(`/search/${keyword}`))
-      this.$router.push(`/search/${this.keyword}`)
+      this.$router.push(`/manual/${this.keyword}`)
     }
   }
 }

@@ -11,9 +11,6 @@
             <router-link to="/custom_manual" class="nav-link" href="#">개인모음집</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">카테고리</a>
-          </li>
-          <li class="nav-item">
             <div v-if="isAuth">
               <a href="#" @click="logout" class="nav-link ml-auto mr-3">로그아웃</a>
             </div>
