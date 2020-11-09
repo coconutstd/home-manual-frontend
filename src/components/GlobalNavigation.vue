@@ -57,7 +57,7 @@ export default {
     },
     search(){
       this.FETCH_RESULTS({keyword: this.keyword})
-      this.$router.go(this.$router.currentRoute)
+      this.$router.push(`/manual/${this.keyword}`)
     }
   }
 }
