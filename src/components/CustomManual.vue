@@ -28,7 +28,7 @@
             <span>그룹추가</span>
             <button type="button" class="btn btn-info">+</button>
             <form method="get" action="">
-              <button type="submit" class="btn btn-info"><i class="fas fa-search"></i></button>
+              <button type="submit" @click.prevent="" class="btn btn-info"><i class="fas fa-search"></i></button>
               <input type="text"/>
             </form>
           </div>
