@@ -7,6 +7,7 @@
 
 <script>
 import GlobalNavigation from './components/GlobalNavigation.vue'
+
 export default {
   name: 'app',
   components: {GlobalNavigation},

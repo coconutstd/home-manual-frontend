@@ -5,7 +5,6 @@
         <div id="naverIdLogin"></div>
       </div>
     </div>
-
   </div>
 </template>
 

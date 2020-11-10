@@ -15,19 +15,19 @@
                 <th>브랜드</th>
               </tr>
               </thead>
-              <tbody>
-              <tr v-for="item in this.$store.state.searchResults" :key="item.id">
+              <tbody class="item-table">
+              <tr v-for="item in searchResults" :key="item.id">
                 <td>
                   <img :src="item.fields.product_image_link" alt="썸네일 입니다" class="img-thumbnail" style="width:100px">
-                </td>
-                <td>
-                  <h2>{{item}}</h2>
                 </td>
                 <td>
                   <h2>{{item.fields.product_code}}</h2>
                 </td>
                 <td>
-                  <h2>{{ item.fields.product_name }}</h2>
+                  <h2>{{item.fields.product_name}}</h2>
+                </td>
+                <td>
+                  <h2>{{ item.fields.product_category }}</h2>
                 </td>
                 <td>
                   <h2>삼성</h2>
@@ -84,6 +84,7 @@ export default {
 .table h2{
   font-size: 10px;
 }
+
 
 @media screen and (min-width: 768px){
   .search-title{
