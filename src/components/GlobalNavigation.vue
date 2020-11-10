@@ -56,6 +56,7 @@ export default {
       this.$router.push('/login')
     },
     search(){
+      if (!this.keyword.length) return
       this.FETCH_RESULTS({keyword: this.keyword})
       this.$router.push(`/manual/${this.keyword}`)
     }

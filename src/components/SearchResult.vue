@@ -2,7 +2,8 @@
   <div>
     <div class="search-results">
       <div class="container my-2">
-<!--        <h1><strong>{{this.$store.state.searchResults["keyword"]}}</strong> 의 검색결과입니다</h1>-->
+        <h1 v-if="isSearchResult" class="search-title"><strong>"{{keyword}}"</strong> 의 검색결과입니다</h1>
+        <h1 v-else class="search-title"><strong>"{{ keyword }}"</strong> 의 검색결과가 없습니다</h1>
         <div class="row">
           <div class="col-12">
             <table class="table table-hover">
@@ -44,6 +45,7 @@
 
 <script>
 import InfiniteLoading from 'vue-infinite-loading'
+import {mapState} from 'vuex'
 
 export default {
   name: "SearchResult"
@@ -51,6 +53,15 @@ export default {
   data() {
     return{
       limit: 0,
+    }
+  },
+  computed:{
+    ...mapState({
+      searchResults: 'searchResults',
+      keyword: 'keyword'
+    }),
+    isSearchResult(){
+      return this.searchResults.length
     }
   },
   components: {
@@ -66,11 +77,19 @@ export default {
 
 <style scoped>
 
+.search-title{
+  font-size: 20px;
+}
+
 .table h2{
   font-size: 10px;
 }
 
 @media screen and (min-width: 768px){
+  .search-title{
+    font-size: 30px;
+  }
+
   .table h2{
     font-size: 25px;
   }

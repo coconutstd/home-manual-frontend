@@ -4,8 +4,7 @@ const actions = {
   FETCH_RESULTS({commit}, {keyword}){
     //commit('SET_RESULTS', {keyword})
     api.manual.fetch(keyword).then(data =>{
-      console.log(data.hits.hit)
-      commit('SET_RESULTS', data.hits.hit)
+      commit('SET_RESULTS', {results:data.hits.hit, keyword: keyword})
     })
   }
 }
